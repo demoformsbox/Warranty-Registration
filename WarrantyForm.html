@@ -9,7 +9,10 @@
         const componentName = 'c:fscWarrantyForm';
         const lightningEndpoint = 'https://fselliott--claimreg.sandbox.my.salesforce-sites.com/WarrantyForm';
         const targetElement = document.querySelector('[data-lightning-out]');
-        const componentAttributes = {};
+        const distributorEmail = window.distributorEmail;
+        const componentAttributes = {
+            distributorEmail: 'test@gmail.com'
+        };
 
         $Lightning.use(
             appName,
