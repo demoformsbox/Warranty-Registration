@@ -9,7 +9,10 @@
         const componentName = 'c:fscRotaryScrewStartUp';
         const lightningEndpoint = 'https://fselliott--claimreg.sandbox.my.salesforce-sites.com/WarrantyRegistration';
         const targetElement = document.querySelector('[data-lightning-out]');
-        const componentAttributes = {};
+        const distributorEmail = window.distributorEmail;
+        const componentAttributes = {
+            distributorEmail: distributorEmail
+        };
 
         $Lightning.use(
             appName,
