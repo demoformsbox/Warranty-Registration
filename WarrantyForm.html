@@ -10,13 +10,14 @@
         const lightningEndpoint = 'https://fselliott--claimreg.sandbox.my.salesforce-sites.com/WarrantyForm';
         const targetElement = document.querySelector('[data-lightning-out]');
         //const email = window.email;
+        const componentAttributes = {
+            email: 'test@gmail.com'
+        };
 
         $Lightning.use(
             appName,
             function (cmp) {
-                $Lightning.createComponent(componentName, {
-                    email: "test@gmail.com"
-                }, targetElement, function () {
+                $Lightning.createComponent(componentName, componentAttributes, targetElement, function () {
                     console.log('lightning component created');
                 });
             },
