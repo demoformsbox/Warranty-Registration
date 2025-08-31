@@ -1,0 +1,27 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://fselliott--claimreg.sandbox.my.salesforce-sites.com/PartsRequest/lightning/lightning.out.js"></script>
+
+    <div data-lightning-out="true"></div>
+
+    <script>
+        const appName = 'c:fscRequestPartFormWrapper';
+        const componentName = 'c:fscPartsRequestForm"';
+        const lightningEndpoint = 'https://fselliott--claimreg.sandbox.my.salesforce-sites.com/PartsRequest';
+        const targetElement = document.querySelector('[data-lightning-out]');
+        //const email = window.email;
+        const componentAttributes = {
+            email: 'test@gmail.com'
+        };
+
+        $Lightning.use(
+            appName,
+            function (cmp) {
+                $Lightning.createComponent(componentName, componentAttributes, targetElement, function () {
+                    console.log('lightning component created');
+                });
+            },
+            lightningEndpoint
+        );
+    </script>
+</html>
